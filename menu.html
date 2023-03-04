@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Menu | Starbucks</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/0581082bd4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"
+          ><img src="./images/logo.png" style="height: 60px; width: 60px"
+        /></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-expanded="true"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Delivers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nutrition</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Rewards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gift Cards</a>
+              </li>
+              <div class="locator" id="loc-d">
+                <i class="fa-solid fa-location-dot fa-xl" id="icon"></i>
+                <div class="store-locator" id="st" style="font-weight: 500">
+                  Find a Store
+                </div>
+              </div>
+              <li>
+                <a class="cta1" id="cta" href="./login.html"
+                  ><button class="btn btn-outline-dark rounded-pill" id="butt">
+                    Sign In
+                  </button></a
+                >
+              </li>
+              <li>
+                <a class="cta2" id="cta" href="./login.html"
+                  ><button class="btn btn-dark rounded-pill" id="butt">
+                    Join Now
+                  </button></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="locator" id="loc">
+          <i class="fa-solid fa-location-dot fa-xl"></i>
+          <div class="store-locator" style="font-weight: 500">Find a Store</div>
+        </div>
+
+        <a class="cta1" href="./login.html" id="loc"
+          ><button class="btn btn-outline-dark rounded-pill">Sign In</button></a
+        >
+        <a class="cta2" href="./login.html" id="loc"
+          ><button class="btn btn-dark rounded-pill">Join Now</button></a
+        >
+      </div>
+    </nav>
+    <hr style="color: grey" />
+
+    <!-- PRODUCTS SECTION -->
+
+    <div class="container-fluid">
+      <div class="row row-cols-lg-2">
+        <div class="col-lg-3 items-list">
+          <ul class="list-group sidebar mt-3 mb-4" id="products-list">
+            <li
+              class="list-group-item border-0"
+              data-category="all"
+              style="font-weight: 700"
+            >
+              Drinks
+            </li>
+            <li class="list-group-item border-0 lit">
+              <a
+                class="filter-btn"
+                data-category="espresso"
+                style="cursor: pointer"
+                >Espresso Drinks</a
+              >
+            </li>
+            <li class="list-group-item border-0 lit">
+              <a
+                class="filter-btn"
+                data-category="brewed"
+                style="cursor: pointer"
+                >Brewed Coffee</a
+              >
+            </li>
+            <li class="list-group-item border-0 lit">
+              <a class="filter-btn" data-category="iced" style="cursor: pointer"
+                >Iced Coffee & Cold Brew</a
+              >
+            </li>
+            <li class="list-group-item border-0 lit">
+              <a
+                class="filter-btn"
+                data-category="bottled"
+                style="cursor: pointer"
+                >Bottled Drinks</a
+              >
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Hot Tea</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Hot Coffee</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Starbucks Refresha Drink</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Frappuccino Blended Beverages</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Hot Chocolate & Other Drinks</a>
+            </li>
+          </ul>
+
+          <ul class="list-group sidebar mb-4" id="products-list">
+            <li class="list-group-item border-0" style="font-weight: 700">
+              Food
+            </li>
+            <li class="list-group-item border-0 lit">
+              <a
+                class="filter-btn"
+                data-category="breakfast"
+                style="cursor: pointer"
+                >Breakfast</a
+              >
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Bakery Treats</a>
+            </li>
+          </ul>
+
+          <ul class="list-group sidebar mb-4" id="products-list">
+            <li class="list-group-item border-0" style="font-weight: 700">
+              At Home
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Whole Bean</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Starbucks Capsules</a>
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>VIA Instant</a>
+            </li>
+          </ul>
+
+          <ul class="list-group sidebar mb-4" id="products-list">
+            <li class="list-group-item border-0" style="font-weight: 700">
+              Mercahandise
+            </li>
+            <li class="list-group-item border-0 lit disabled">
+              <a>Serveware</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9 col-md-12 products-list">
+          <h4 class="lead mt-4" style="font-weight: 600">Menu</h4>
+
+          <div id="s-category" class="text-muted"></div>
+
+          <hr />
+          <!-- product line 1 -->
+          <div class="row row-cols-lg-6">
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/assets/a41e9afa349af0c2c601b0f5569b93a8_0.jpg"
+                    class="rounded lazy"
+                    style="border-radius: 100% !important"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Caffè Latte</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Iced-Latte.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Iced Caffè Latte</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Mocha.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Caffè Mocha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Iced-Mocha.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Iced Caffè Mocha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/White-Mocha.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">White Chocolate Mocha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="espresso">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Iced-White-Mocha.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Iced White Chocolate Mocha
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="brewed">
+                <div class="card" style="border: none">
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Filter-Coffee_0.jpeg"
+                    class="rounded lazy"
+                    id="list-item-1"
+                    style="border-radius: 100% !important"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Filter Coffee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="brewed">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Caffe-Misto_0.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Caffè Misto</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- product line 3 -->
+          <div class="row row-cols-lg-6 mt-0">
+            <div class="col">
+              <div class="products" data-category="bottled">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Water-750ML.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">One Water 750ml Still</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="bottled">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Water-500ML.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">One Water 500ml Still</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="bottled">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Still-Lemonade-250ML_0.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Still Lemonade</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="bottled">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Raspberry-Lemonade-330ml.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Still Lemonade</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- product line 4 -->
+          <div class="row row-cols-lg-6 mt-0">
+            <div class="col">
+              <div class="products" data-category="iced">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Cold-Brew.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Cold Brew Coffee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="iced">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Cold-Brew-Latte_1.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Cold Brew Latte</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="iced">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Nitro-Cold-Brew.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Cold Brew Nitro</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="iced">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Nitro-Cold-Brew-Latte.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Nitro Latte</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- product line 5 -->
+          <div class="row row-cols-lg-6 mt-0">
+            <div class="col">
+              <div class="products" data-category="breakfast">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Plant-Based-Breakfast-Wrap-%28Plant-Based%29_0.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Plant Based Breakfast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="breakfast">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Egg-Bites-Red-Pepper-Updated.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Egg Bites with Red Pepper
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="breakfast">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Peach-%26-Raspberry-Overnight-Oats-%28Plant-Based%29.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Peach & Raspberry Overnight Oats
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="breakfast">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/assets/1cb06cb5a4001310d22154add3615ee0_0.jpg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Signature Breakfast Sandwich
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="products" data-category="breakfast">
+                <div class="card" style="border: none">
+                  <!-- card width: 12.7rem;  -->
+                  <img
+                    src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Ham-%26-Cheese-Croissant_1.jpeg"
+                    class="rounded lazy"
+                    style="
+                      border-radius: 100% !important;
+                      object-fit: contain !important;
+                    "
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Cheese & Ham Croissant</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container footer">
+      <footer
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 my-5 border-top"
+      >
+        <div class="col mb-3">
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+          >
+            <img
+              src="./images/logo.png"
+              class="f-logo"
+              alt="logo"
+              style="height: 60px; width: 60px"
+            />
+          </a>
+          <p class="text-muted">&copy; 2023</p>
+
+          <div class="social-icons mt-4 icons">
+            <i class="fa-brands fa-facebook fa-xl"></i>
+            <i class="fa-brands fa-pinterest fa-xl"></i>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+            <i class="fa-brands fa-twitter fa-xl"></i>
+          </div>
+          <div class="dev_quote mt-4">
+            <p style="font-size: 12px">
+              Designed & Developed by
+              <span style="color: green"
+                ><b><i>Anupam Pammi</i></b></span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+          <h5>About Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About Us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Our Coffees</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted"
+                >Starbucks Stories & News</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted"
+                >Starbucks Ready to Drink</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Foodservice Coffee</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Customer Service</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Tax Strategy 2022</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Careers</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Search Careers</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Social Impact</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Responsibility</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">COVID-19</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col mb-3">
+          <h5>Starbucks Card</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Starbucks Card</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted"
+                >Starbucks Card Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
